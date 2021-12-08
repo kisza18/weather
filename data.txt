@@ -1,0 +1,25 @@
+main:
+    feels_like
+    humidity
+    pressure
+    temp
+    temp_max
+    temp_min
+
+name
+
+sys:
+    country
+    sunrise
+    sunset
+
+timezone
+
+weather:
+    0:
+        main
+        description
+        icon
+
+wind:
+    speed
