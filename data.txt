@@ -23,3 +23,5 @@ weather:
 
 wind:
     speed
+
+visibility
