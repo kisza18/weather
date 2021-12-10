@@ -1,5 +1,5 @@
 <template>
-  <div class="card rounded-xl text-gray-300 px-4 py-3 text-sm my-4">
+  <div class="card rounded-xl text-gray-300 px-4 py-3 text-sm my-4 shadow-lg">
     <slot></slot>
   </div>
 </template>
