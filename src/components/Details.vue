@@ -1,5 +1,5 @@
 <template>
-  <div class="blur pl-10 pr-20 pt-5 overflow-auto">
+  <div class="details blur pl-10 pr-10 pt-5 overflow-auto">
     <!--header-->
     <div class="header flex items-center justify-between text-gray-300">
       <h1 class="font-bold">DAY DETAILS</h1>
@@ -10,25 +10,25 @@
       </div>
     </div>
     <!--content-->
-    <div>
+    <div class="flex flex-col justify-between">
       <Card>
         <h1>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab minus
           laudantium similique optio explicabo expedita.
         </h1>
       </Card>
-      <div class="flex items-center justify-between">
-        <Card class="flex">
-          <h1 class="pr-2">SUNRISE</h1>
-          <span>5:44 AM</span>
-        </Card>
-        <Card class="flex">
-          <h1 class="pr-2">SUNSET</h1>
-          <span>8:57 PM</span>
-        </Card>
-      </div>
+      <Card class="flex items-center">
+        <i class="fal fa-sunrise pr-5 text-lg"></i>
+        <h1 class="pr-2">SUNRISE</h1>
+        <span>5:44 AM</span>
+      </Card>
+      <Card class="flex items-center">
+        <i class="fal fa-sunset pr-5 text-lg"></i>
+        <h1 class="pr-2">SUNSET</h1>
+        <span>8:57 PM</span>
+      </Card>
       <div>
-        <Card class="flex items-center justify-between text-center py-6">
+        <Card class="flex items-center justify-around text-center py-6">
           <div>
             <h1>Humidity</h1>
             <i class="fal fa-humidity text-2xl py-2"></i>
@@ -47,9 +47,6 @@
         </Card>
       </div>
     </div>
-    <div class="h-96"></div>
-    <div class="h-96"></div>
-    <div class="h-96"></div>
   </div>
 </template>
 

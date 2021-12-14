@@ -39,7 +39,7 @@ export default {
     getCurrentWeather() {
       axios
         .get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&appid=${this.APIkey}`
+          `https://api.openweathermap.org/data/2.5/onecall?lat=47.498&lon=19.0399&units=metric&&appid=${this.APIkey}`
         )
         .then((res) => {
           console.log(res.data);
