@@ -66,9 +66,20 @@ export default {
     getData() {
       axios
         .get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.APIkey}`
+          `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&appid=${this.APIkey}`
         )
         .then((res) => {
+          this.city = res.data.name;
+          this.temp = Math.round(res.data.main.temp);
+          this.description = res.data.weather[0].main;
+          this.date = new Date(res.data.dt * 1000).toLocaleDateString(
+            "en-US",
+            this.options
+          );
+          this.icon =
+            "http://openweathermap.org/img/w/" +
+            res.data.weather[0].icon +
+            ".png";
           console.log(res.data);
         });
     },
