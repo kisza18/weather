@@ -17,16 +17,17 @@
           laudantium similique optio explicabo expedita.
         </h1>
       </Card>
-      <Card class="flex items-center">
-        <i class="fal fa-sunrise pr-5 text-lg"></i>
-        <h1 class="pr-2">SUNRISE</h1>
-        <span>5:44 AM</span>
-      </Card>
-      <Card class="flex items-center">
-        <i class="fal fa-sunset pr-5 text-lg"></i>
-        <h1 class="pr-2">SUNSET</h1>
-        <span>8:57 PM</span>
-      </Card>
+      <div class="flex items-center justify-between">
+        <Card class="flex items-center">
+          <h1 class="pr-2">SUNRISE</h1>
+          <span>5:44 AM</span>
+        </Card>
+        <Card class="flex items-center">
+          <h1 class="pr-2">SUNSET</h1>
+          <span>8:57 PM</span>
+        </Card>
+      </div>
+
       <div>
         <Card class="flex items-center justify-around text-center py-6">
           <div>
@@ -46,6 +47,58 @@
           </div>
         </Card>
       </div>
+      <Card>
+        <table class="table-auto w-full text-left">
+          <tbody>
+            <tr>
+              <td class="py-1"><h1>Tue 21</h1></td>
+              <td class="py-1 text-center">
+                <i class="fal fa-thunderstorm"></i>
+              </td>
+              <td class="py-1 text-center"><h1>Thunderstorm</h1></td>
+              <td class="py-1 text-right"><h1>29° / 32°</h1></td>
+            </tr>
+            <tr>
+              <td class="py-1"><h1>Wed 22</h1></td>
+              <td class="py-1 text-center"><i class="fal fa-sun-cloud"></i></td>
+              <td class="py-1 text-center"><h1>Sun cloud</h1></td>
+              <td class="py-1 text-right"><h1>30° / 33°</h1></td>
+            </tr>
+            <tr>
+              <td class="py-1"><h1>Thu 23</h1></td>
+              <td class="py-1 text-center"><i class="fal fa-fog"></i></td>
+              <td class="py-1 text-center"><h1>Fog</h1></td>
+              <td class="py-1 text-right"><h1>21° / 23°</h1></td>
+            </tr>
+            <tr>
+              <td class="py-1"><h1>Fri 24</h1></td>
+              <td class="py-1 text-center">
+                <i class="fal fa-cloud-rain"></i>
+              </td>
+              <td class="py-1 text-center"><h1>Rain</h1></td>
+              <td class="py-1 text-right"><h1>25° / 26°</h1></td>
+            </tr>
+            <tr>
+              <td class="py-1"><h1>Sat 25</h1></td>
+              <td class="py-1 text-center"><i class="fal fa-fog"></i></td>
+              <td class="py-1 text-center"><h1>Fog</h1></td>
+              <td class="py-1 text-right"><h1>18° / 19°</h1></td>
+            </tr>
+            <tr>
+              <td class="py-1"><h1>Sun 26</h1></td>
+              <td class="py-1 text-center"><i class="fal fa-sun-cloud"></i></td>
+              <td class="py-1 text-center"><h1>Sun cloud</h1></td>
+              <td class="py-1 text-right"><h1>31° / 33°</h1></td>
+            </tr>
+            <tr>
+              <td class="py-1"><h1>Mon 27</h1></td>
+              <td class="py-1 text-center"><i class="fal fa-sun"></i></td>
+              <td class="py-1 text-center"><h1>Sun</h1></td>
+              <td class="py-1 text-right"><h1>33° / 35°</h1></td>
+            </tr>
+          </tbody>
+        </table>
+      </Card>
     </div>
   </div>
 </template>
@@ -60,6 +113,10 @@ export default {
 </script>
 
 <style scoped>
+.details {
+  min-width: 400px;
+  width: 500px;
+}
 .blur {
   background: linear-gradient(
     to right top,

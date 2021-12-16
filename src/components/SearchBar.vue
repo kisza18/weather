@@ -8,6 +8,7 @@
         class="rounded-full bg-transparent outline-none"
         type="text"
         placeholder="another location"
+        @change="$emit('sendChange', $event.target.value)"
       />
     </div>
     <div class="menu">
@@ -19,3 +20,11 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {};
+  },
+};
+</script>
