@@ -20,11 +20,11 @@
       <div class="flex items-center justify-between">
         <Card class="flex items-center">
           <h1 class="pr-2">SUNRISE</h1>
-          <span>5:44 AM</span>
+          <span>{{ sunrise }}</span>
         </Card>
         <Card class="flex items-center">
           <h1 class="pr-2">SUNSET</h1>
-          <span>8:57 PM</span>
+          <span>{{ sunset }}</span>
         </Card>
       </div>
 
@@ -33,17 +33,17 @@
           <div>
             <h1>Humidity</h1>
             <i class="fal fa-humidity text-2xl py-2"></i>
-            <h1>62 %</h1>
+            <h1>{{ humidity }} %</h1>
           </div>
           <div>
             <h1>Pressure</h1>
             <i class="fal fa-cloud-download text-2xl py-2"></i>
-            <h1>1023 hPa</h1>
+            <h1>{{ pressure }} hPa</h1>
           </div>
           <div>
             <h1>Wind</h1>
             <i class="fal fa-wind text-2xl py-2"></i>
-            <h1>10 km/h</h1>
+            <h1>{{ wind }} km/h</h1>
           </div>
         </Card>
       </div>
@@ -106,6 +106,7 @@
 <script>
 import Card from "./Card.vue";
 export default {
+  props: ["sunrise", "sunset", "humidity", "pressure", "wind"],
   components: {
     Card,
   },
@@ -118,10 +119,6 @@ export default {
   width: 500px;
 }
 .blur {
-  background: linear-gradient(
-    to right top,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.2)
-  );
+  background: rgba(0, 0, 0, 0.5);
 }
 </style>

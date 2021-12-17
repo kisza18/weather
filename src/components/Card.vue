@@ -6,6 +6,6 @@
 
 <style scoped>
 .card {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.4);
 }
 </style>

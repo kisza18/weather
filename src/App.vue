@@ -1,8 +1,8 @@
 <template>
   <main class="relative">
     <img
-      class="object-cover h-full w-full absolute filter grayscale"
-      src="./images/fog2.jpg"
+      class="object-cover h-full w-full absolute filter"
+      src="./images/drizzle.jpg"
       alt="wallpaper"
     />
     <div class="absolute top-0 h-full w-full flex justify-between">
@@ -16,7 +16,13 @@
           :icon="icon"
         />
       </div>
-      <Details />
+      <Details
+        :sunrise="sunrise"
+        :sunset="sunset"
+        :humidity="humidity"
+        :pressure="pressure"
+        :wind="wind"
+      />
     </div>
   </main>
 </template>
@@ -49,10 +55,17 @@ export default {
         year: "numeric",
         month: "short",
         day: "numeric",
-        hour: "numeric",
-        minute: "numeric",
+      },
+      timestamp: {
+        hour: "2-digit",
+        minute: "2-digit",
       },
       icon: "",
+      sunrise: "",
+      sunset: "",
+      humidity: "",
+      pressure: "",
+      wind: "",
     };
   },
   created() {
@@ -80,6 +93,16 @@ export default {
             "http://openweathermap.org/img/w/" +
             res.data.weather[0].icon +
             ".png";
+          this.sunrise = new Date(
+            res.data.sys.sunrise * 1000
+          ).toLocaleTimeString("en-US", this.timestamp);
+          this.sunset = new Date(res.data.sys.sunset * 1000).toLocaleTimeString(
+            "en-US",
+            this.timestamp
+          );
+          this.humidity = res.data.main.humidity;
+          this.pressure = res.data.main.pressure;
+          this.wind = res.data.wind.speed;
           console.log(res.data);
         });
     },
