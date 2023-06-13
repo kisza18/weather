@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bgdark: #0b121e;
+  --primarydark: #202b3c;
+  --textdark: #f0f0f2;
+  --primarybutton: #0094ff;
+  --bglight: #f5f5f5;
+  --primarylight: #eaecef;
+  --textlight: #202b3b;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: rgb(87, 96, 109);
+  background: linear-gradient(
+    140deg,
+    rgba(87, 96, 109, 1) 0%,
+    rgba(32, 43, 59, 1) 100%
+  );
+  width: 100vw;
+  height: 100vh;
+  min-height: 648px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-container {
+  background-color: var(--bgdark);
+  display: flex;
+  width: 100vw;
+  max-width: 1300px;
+  max-height: 1000px;
+  border: 1px solid var(--primarydark);
+}
