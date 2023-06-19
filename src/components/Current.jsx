@@ -1,6 +1,11 @@
 import currentImg from "../images/clear.png";
+import { useDataContext } from "../providers/DataProvider";
+import { useEffect } from "react";
+import axios from "axios";
 
 const Current = () => {
+  const { data } = useDataContext();
+
   return (
     <div className="text-textdark my-5 mx-10 flex items-center justify-between">
       <div>

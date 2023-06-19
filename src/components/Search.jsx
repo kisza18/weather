@@ -1,8 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
+import { useDataContext } from "../providers/DataProvider";
 
 const Search = () => {
   const [city, setCity] = useState("");
+  const { addData } = useDataContext();
 
   const getData = () => {
     axios
@@ -11,6 +13,7 @@ const Search = () => {
       )
       .then((res) => {
         console.log(res.data);
+        addData(res.data);
       })
       .catch((err) => {
         console.log(err);
