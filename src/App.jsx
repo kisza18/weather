@@ -5,6 +5,7 @@ import TodayForecast from "./components/TodayForecast";
 import Conditions from "./components/Conditions";
 import SevenDays from "./components/SevenDays";
 import Navbar from "./components/Navbar";
+import Astro from "./components/Astro";
 
 function App() {
   return (
@@ -26,9 +27,12 @@ function App() {
           <Conditions />
         </CardLayout>
       </div>
-      <div className="side w-1/3">
+      <div className="flex flex-col gap-5 w-1/3">
         <CardLayout>
           <SevenDays />
+        </CardLayout>
+        <CardLayout>
+          <Astro />
         </CardLayout>
       </div>
     </div>

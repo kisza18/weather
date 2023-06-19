@@ -42,50 +42,6 @@ const SevenDays = () => {
             36 <span className="text-gray-500">/22</span>
           </p>
         </div>
-        <div className="borderbottom"></div>
-        <div className="flex items-center justify-between">
-          <p className="text-gray-500 text-xs font-semibold w-5">Thu</p>
-          <div className="flex items-center">
-            <img className="w-7 mr-3" src={cloudImg} alt="" />
-            <p className="text-textdark text-xs font-semibold">Cloudy</p>
-          </div>
-          <p className="text-textdark text-xs font-semibold">
-            36 <span className="text-gray-500">/22</span>
-          </p>
-        </div>
-        <div className="borderbottom"></div>
-        <div className="flex items-center justify-between">
-          <p className="text-gray-500 text-xs font-semibold w-5">Fri</p>
-          <div className="flex items-center">
-            <img className="w-7 mr-3" src={cloudImg} alt="" />
-            <p className="text-textdark text-xs font-semibold">Cloudy</p>
-          </div>
-          <p className="text-textdark text-xs font-semibold">
-            36 <span className="text-gray-500">/22</span>
-          </p>
-        </div>
-        <div className="borderbottom"></div>
-        <div className="flex items-center justify-between">
-          <p className="text-gray-500 text-xs font-semibold w-5">Sat</p>
-          <div className="flex items-center">
-            <img className="w-7 mr-3" src={rainImg} alt="" />
-            <p className="text-textdark text-xs font-semibold">Rainy</p>
-          </div>
-          <p className="text-textdark text-xs font-semibold">
-            36 <span className="text-gray-500">/22</span>
-          </p>
-        </div>
-        <div className="borderbottom"></div>
-        <div className="flex items-center justify-between">
-          <p className="text-gray-500 text-xs font-semibold w-5">Sun</p>
-          <div className="flex items-center">
-            <img className="w-7 mr-3" src={stormImg} alt="" />
-            <p className="text-textdark text-xs font-semibold">Storm</p>
-          </div>
-          <p className="text-textdark text-xs font-semibold">
-            36 <span className="text-gray-500">/22</span>
-          </p>
-        </div>
       </div>
     </div>
   );
