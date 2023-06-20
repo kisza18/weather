@@ -12,8 +12,8 @@ const Search = () => {
         `http://api.weatherapi.com/v1/forecast.json?key=4c5af73e30dd4167b02114039231603&q=${city}&days=3&aqi=yes&alerts=no`
       )
       .then((res) => {
-        console.log(res.data);
         addData(res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
