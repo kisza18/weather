@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useDataContext } from "../providers/DataProvider";
+import CardLayout from "../layouts/CardLayout";
 
 const Search = () => {
   const [city, setCity] = useState("");
@@ -21,20 +22,22 @@ const Search = () => {
   };
 
   return (
-    <div className="flex items-center justify-between">
-      <input
-        className="bg-transparent text-textdark outline-none text-sm tracking-wide w-full"
-        placeholder="Search for cities"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-      />
-      <button
-        onClick={getData}
-        className="bg-primarybutton text-textdark px-4 py-1 rounded-full shadow-xl"
-      >
-        search
-      </button>
-    </div>
+    <CardLayout>
+      <div className="flex items-center justify-between">
+        <input
+          className="bg-transparent text-textdark outline-none text-sm tracking-wide w-full"
+          placeholder="Search for cities"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        />
+        <button
+          onClick={getData}
+          className="bg-primarybutton text-textdark px-4 py-1 rounded-full shadow-xl"
+        >
+          search
+        </button>
+      </div>
+    </CardLayout>
   );
 };
 

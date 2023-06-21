@@ -3,17 +3,18 @@ import chanceImg from "../images/chanceofrain.png";
 import windyImg from "../images/windy.png";
 import uvImg from "../images/uv.png";
 import { useDataContext } from "../providers/DataProvider";
+import CardLayout from "../layouts/CardLayout";
 
 const Conditions = () => {
   const { data } = useDataContext();
   return (
-    <div>
+    <CardLayout>
       <div className="flex items-center justify-between">
         <p className="text-xs text-gray-500 font-semibold uppercase">
           Air Conditions
         </p>
       </div>
-      <div className="flex items-center justify-between my-6 mx-4">
+      <div className="grid grid-cols-2 gap-10 sm:gap-0 sm:flex items-center justify-between my-6 mx-4">
         <div className="flex items-start">
           <img className="w-6 mr-2" src={realfeelImg} alt="" />
           <div className="flex flex-col">
@@ -51,7 +52,7 @@ const Conditions = () => {
           </div>
         </div>
       </div>
-    </div>
+    </CardLayout>
   );
 };
 

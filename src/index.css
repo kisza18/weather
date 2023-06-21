@@ -33,7 +33,6 @@ body {
   display: flex;
   width: 100vw;
   max-width: 1300px;
-  max-height: 1000px;
   border: 1px solid var(--primarydark);
 }
 .borderbottom {
@@ -48,6 +47,10 @@ body {
   display: flex;
   width: 100vw;
   max-width: 1300px;
-  max-height: 1000px;
   border: 1px solid var(--primarydark);
+}
+@media (max-width: 1024px) {
+  body {
+    height: 100%;
+  }
 }

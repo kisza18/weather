@@ -21,31 +21,19 @@ function App() {
     <DataProvider>
       {intro && <Intro toggle={toggleIntro} />}
       {!intro && (
-        <div className="app-container p-5 flex gap-5 rounded-3xl shadow-2xl">
-          <div className="w-20">
-            <CardLayout>
-              <Navbar />
-            </CardLayout>
-          </div>
-          <div className="flex flex-col gap-5 w-2/3">
-            <CardLayout>
-              <Search />
-            </CardLayout>
+        <div className="app-container p-3 md:p-5 flex flex-col lg:flex-row gap-5 rounded-3xl shadow-2xl">
+          {/* <div className="w-20 hidden lg:block">
+            <Navbar />
+          </div> */}
+          <div className="flex flex-col gap-5 lg:w-2/3">
+            <Search />
             <Current />
-            <CardLayout>
-              <TodayForecast />
-            </CardLayout>
-            <CardLayout>
-              <Conditions />
-            </CardLayout>
+            <TodayForecast />
+            <Conditions />
           </div>
-          <div className="flex flex-col gap-5 w-1/3">
-            <CardLayout>
-              <SevenDays />
-            </CardLayout>
-            <CardLayout>
-              <Astro />
-            </CardLayout>
+          <div className="flex flex-col gap-5 lg:w-1/3">
+            <SevenDays />
+            <Astro />
           </div>
         </div>
       )}

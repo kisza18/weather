@@ -23,20 +23,20 @@ const Intro = ({ toggle }) => {
   };
 
   return (
-    <div className="intro flex items-center justify-between w-full p-10 rounded-xl">
-      <div className="flex items-center justify-center w-1/2 bg-primarydark rounded-xl">
-        <img src={introImg} alt="intro" />
+    <div className="intro flex flex-col gap-10 lg:flex-row items-center justify-between w-full p-10 rounded-xl">
+      <div className="flex items-center justify-center lg:w-1/2 bg-primarydark rounded-xl">
+        <img className="w-60 lg:w-full" src={introImg} alt="intro" />
       </div>
-      <div className="flex flex-col items-center justify-center w-1/2">
+      <div className="flex flex-col items-center justify-center lg:w-1/2">
         <img
           className="logo w-16 bg-gray-700 p-2 rounded-xl mb-3"
           src={logoImg}
           alt="logo"
         />
-        <h1 className="text-textdark text-4xl font-bold mb-1">Breeze</h1>
-        <p className="text-gray-500 mb-10">Weather App</p>
+        <h1 className="text-textdark text-5xl font-bold mb-1">Breeze</h1>
+        <p className="text-gray-500 text-xl mb-10">Weather App</p>
         <input
-          className="bg-primarydark text-textdark outline-none text-sm tracking-wide rounded-xl px-5 py-2 mb-5 text-center"
+          className="bg-primarydark text-textdark outline-none text-sm tracking-wide rounded-xl px-5 py-2 mb-5 text-center text-lg"
           placeholder="Search for cities"
           value={city}
           onChange={(e) => setCity(e.target.value)}
