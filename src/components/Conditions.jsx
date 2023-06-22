@@ -4,6 +4,7 @@ import windyImg from "../images/windy.png";
 import uvImg from "../images/uv.png";
 import { useDataContext } from "../providers/DataProvider";
 import CardLayout from "../layouts/CardLayout";
+import ConditionCard from "./ConditionCard";
 
 const Conditions = () => {
   const { data } = useDataContext();
@@ -15,42 +16,30 @@ const Conditions = () => {
         </p>
       </div>
       <div className="grid grid-cols-2 gap-10 sm:gap-0 sm:flex items-center justify-between my-6 mx-4">
-        <div className="flex items-start">
-          <img className="icon w-6 mr-2" src={realfeelImg} alt="" />
-          <div className="flex flex-col">
-            <p className="text-gray-400 text-xs">Real feel</p>
-            <h1 className="text-textdark text-xl font-bold mt-2">
-              {data.current.feelslike_c}°
-            </h1>
-          </div>
-        </div>
-        <div className="flex items-start">
-          <img className="icon w-6 mr-2" src={windyImg} alt="" />
-          <div className="flex flex-col">
-            <p className="text-gray-400 text-xs">Wind</p>
-            <h1 className="text-textdark text-xl font-bold mt-2">
-              {data.current.wind_kph} km/h
-            </h1>
-          </div>
-        </div>
-        <div className="flex items-start">
-          <img className="icon w-6 mr-2" src={chanceImg} alt="" />
-          <div className="flex flex-col">
-            <p className="text-gray-400 text-xs">Chance of rain</p>
-            <h1 className="text-textdark text-xl font-bold mt-2">
-              {data.forecast.forecastday[0].day.daily_chance_of_rain}%
-            </h1>
-          </div>
-        </div>
-        <div className="flex items-start">
-          <img className="icon w-6 mr-2" src={uvImg} alt="" />
-          <div className="flex flex-col">
-            <p className="text-gray-400 text-xs">UV Index</p>
-            <h1 className="text-textdark text-xl font-bold mt-2">
-              {data.current.uv}
-            </h1>
-          </div>
-        </div>
+        <ConditionCard
+          class="flex items-start"
+          image={realfeelImg}
+          title="Real feel"
+          content={data.current.feelslike_c + "°"}
+        />
+        <ConditionCard
+          class="flex items-start"
+          image={windyImg}
+          title="Wind"
+          content={data.current.wind_kph + "km/h"}
+        />
+        <ConditionCard
+          class="flex items-start"
+          image={chanceImg}
+          title="Chance of rain"
+          content={data.forecast.forecastday[0].day.daily_chance_of_rain + "%"}
+        />
+        <ConditionCard
+          class="flex items-start"
+          image={uvImg}
+          title="UV Index"
+          content={data.current.uv}
+        />
       </div>
     </CardLayout>
   );

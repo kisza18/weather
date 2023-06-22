@@ -14,11 +14,17 @@ const Search = () => {
       )
       .then((res) => {
         addData(res.data);
-        console.log(res.data);
+        setCity("");
       })
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  const handleKey = (event) => {
+    if (event.key === "Enter") {
+      getData();
+    }
   };
 
   return (
@@ -29,6 +35,7 @@ const Search = () => {
           placeholder="Search for cities"
           value={city}
           onChange={(e) => setCity(e.target.value)}
+          onKeyDown={handleKey}
         />
         <button
           onClick={getData}

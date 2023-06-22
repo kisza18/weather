@@ -1,8 +1,17 @@
 import CardLayout from "../layouts/CardLayout";
 import { useDataContext } from "../providers/DataProvider";
+import ThreeDayCard from "./ThreeDayCard";
 
 const SevenDays = () => {
   const { data } = useDataContext();
+
+  const getDayName = (dataArray) => {
+    const dateString = dataArray;
+    const d = new Date(dateString);
+    const dayName = d.toString().split(" ")[0];
+    return dayName;
+  };
+
   return (
     <CardLayout>
       <div className="h-full">
@@ -10,65 +19,29 @@ const SevenDays = () => {
           3-Day Forecast
         </p>
         <div className="h-full flex flex-col justify-evenly mx-2 gap-5 lg:gap-0 mt-5 lg:mt-0">
-          <div className="flex items-center justify-between">
-            <p className="text-gray-400 text-xs font-semibold w-5">Today</p>
-            <div className="flex items-center">
-              <img
-                className="w-7 mr-3"
-                src={data.forecast.forecastday[0].day.condition.icon}
-                alt=""
-              />
-              <p className="text-textdark text-xs font-semibold">
-                {data.current.condition.text}
-              </p>
-            </div>
-            <p className="text-textdark text-xs font-semibold">
-              {data.forecast.forecastday[0].day.maxtemp_c}
-              <span className="text-gray-400">
-                /{data.forecast.forecastday[0].day.mintemp_c}
-              </span>
-            </p>
-          </div>
+          <ThreeDayCard
+            day="Today"
+            image={data.forecast.forecastday[0].day.condition.icon}
+            text={data.current.condition.text}
+            max={data.forecast.forecastday[0].day.maxtemp_c}
+            min={data.forecast.forecastday[0].day.mintemp_c}
+          />
           <div className="borderbottom"></div>
-          <div className="flex items-center justify-between">
-            <p className="text-gray-400 text-xs font-semibold w-5">Tue</p>
-            <div className="flex items-center">
-              <img
-                className="w-7 mr-3"
-                src={data.forecast.forecastday[1].day.condition.icon}
-                alt=""
-              />
-              <p className="text-textdark text-xs font-semibold">
-                {data.forecast.forecastday[1].day.condition.text}
-              </p>
-            </div>
-            <p className="text-textdark text-xs font-semibold">
-              {data.forecast.forecastday[1].day.maxtemp_c}
-              <span className="text-gray-400">
-                /{data.forecast.forecastday[1].day.mintemp_c}
-              </span>
-            </p>
-          </div>
+          <ThreeDayCard
+            day={getDayName(data.forecast.forecastday[1].date)}
+            image={data.forecast.forecastday[1].day.condition.icon}
+            text={data.forecast.forecastday[1].day.condition.text}
+            max={data.forecast.forecastday[1].day.maxtemp_c}
+            min={data.forecast.forecastday[1].day.mintemp_c}
+          />
           <div className="borderbottom"></div>
-          <div className="flex items-center justify-between">
-            <p className="text-gray-400 text-xs font-semibold w-5">Wed</p>
-            <div className="flex items-center">
-              <img
-                className="w-7 mr-3"
-                src={data.forecast.forecastday[2].day.condition.icon}
-                alt=""
-              />
-              <p className="text-textdark text-xs font-semibold">
-                {data.forecast.forecastday[2].day.condition.text}
-              </p>
-            </div>
-            <p className="text-textdark text-xs font-semibold">
-              {data.forecast.forecastday[2].day.maxtemp_c}
-              <span className="text-gray-400">
-                /{data.forecast.forecastday[2].day.mintemp_c}
-              </span>
-            </p>
-          </div>
+          <ThreeDayCard
+            day={getDayName(data.forecast.forecastday[2].date)}
+            image={data.forecast.forecastday[2].day.condition.icon}
+            text={data.forecast.forecastday[2].day.condition.text}
+            max={data.forecast.forecastday[2].day.maxtemp_c}
+            min={data.forecast.forecastday[2].day.mintemp_c}
+          />
         </div>
       </div>
     </CardLayout>
