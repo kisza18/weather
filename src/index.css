@@ -54,3 +54,7 @@ body {
     height: 100%;
   }
 }
+.icon {
+  filter: invert(71%) sepia(9%) saturate(367%) hue-rotate(179deg)
+    brightness(90%) contrast(88%);
+}

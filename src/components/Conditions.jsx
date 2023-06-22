@@ -16,7 +16,7 @@ const Conditions = () => {
       </div>
       <div className="grid grid-cols-2 gap-10 sm:gap-0 sm:flex items-center justify-between my-6 mx-4">
         <div className="flex items-start">
-          <img className="w-6 mr-2" src={realfeelImg} alt="" />
+          <img className="icon w-6 mr-2" src={realfeelImg} alt="" />
           <div className="flex flex-col">
             <p className="text-gray-400 text-xs">Real feel</p>
             <h1 className="text-textdark text-xl font-bold mt-2">
@@ -25,7 +25,7 @@ const Conditions = () => {
           </div>
         </div>
         <div className="flex items-start">
-          <img className="w-6 mr-2" src={windyImg} alt="" />
+          <img className="icon w-6 mr-2" src={windyImg} alt="" />
           <div className="flex flex-col">
             <p className="text-gray-400 text-xs">Wind</p>
             <h1 className="text-textdark text-xl font-bold mt-2">
@@ -34,7 +34,7 @@ const Conditions = () => {
           </div>
         </div>
         <div className="flex items-start">
-          <img className="w-6 mr-2" src={chanceImg} alt="" />
+          <img className="icon w-6 mr-2" src={chanceImg} alt="" />
           <div className="flex flex-col">
             <p className="text-gray-400 text-xs">Chance of rain</p>
             <h1 className="text-textdark text-xl font-bold mt-2">
@@ -43,7 +43,7 @@ const Conditions = () => {
           </div>
         </div>
         <div className="flex items-start">
-          <img className="w-6 mr-2" src={uvImg} alt="" />
+          <img className="icon w-6 mr-2" src={uvImg} alt="" />
           <div className="flex flex-col">
             <p className="text-gray-400 text-xs">UV Index</p>
             <h1 className="text-textdark text-xl font-bold mt-2">
