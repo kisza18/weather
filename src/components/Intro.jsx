@@ -23,7 +23,7 @@ const Intro = ({ toggle }) => {
   };
 
   return (
-    <div className="intro flex flex-col gap-10 lg:flex-row items-center justify-between w-full p-10 rounded-xl">
+    <div className="intro flex flex-col gap-10 lg:flex-row items-center justify-center w-full h-screen lg:h-full p-10 rounded-xl">
       <div className="flex items-center justify-center lg:w-1/2 bg-primarydark rounded-xl">
         <img className="w-60 lg:w-full" src={introImg} alt="intro" />
       </div>
